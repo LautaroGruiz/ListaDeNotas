@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Familjen Grotesk", sans-serif;
+}
+.mainApp {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: rgb(252, 248, 237);
+}
+.contenedorCrearTasks {
+  width: 26rem;
+  height: 37rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px -7px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 20px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 20px -7px rgba(0, 0, 0, 0.75);
+}
+.CreateNewTask {
+  color: #38115c;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  margin: 2rem 0 0 1.5rem;
+}
+.cajaInputAgregarTask {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  margin: 2.3rem 0 0 1.5rem;
+  /* border: 1px solid red; */
+}
+.tittleTaskName {
+  color: #451672;
+  margin-bottom: 8px;
+}
+.AddTaksInput {
+  height: 40px;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 0 15px;
+  background-color: rgba(128, 128, 128, 0.164);
+  border: none;
+  color: black;
+  outline: none;
+  box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+.buttonCreateTask {
+    background-color: #5f2892;
+    font-size: 14px;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 3px;
+    color: white;
+    margin: 1.3rem 0 0 1.5rem;
+    transition: 0.2s;
+}
+.buttonCreateTask:hover {
+    background-color: #8438cc;
+    padding: 10px 16px;
+}
+.imageMen {
+    width: 90%;
+    margin: 3rem 0 0 1.3rem;
+}
+/* --------------------------------------------- */
+.contenedorTasks {
+  width: 28rem;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid rgb(71, 19, 139); */
+}
+.tittleYourTasks {
+  font-family: "Familjen Grotesk", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  background: #55c3d9;
+  background: linear-gradient(to right, #55c3d9 0%, #e66027 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.completeTittle {
+  color: #38115c;
+  margin-top: 0.1rem;
+  margin-bottom: 2rem;
+}
+.contenedorInput {
+  position: relative;
+}
+.inputSearchTasks {
+  width: 250px;
+  height: 40px;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 0 15px;
+  border: 2px solid #fff;
+  color: black;
+  outline: none;
+  box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+.contenedorInput label {
+  position: absolute;
+  top: 45%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #38115c;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.inputSearchTasks:focus ~ label {
+  top: 0;
+  left: 15px;
+  font-size: 14px;
+  padding: 0 2px;
+  background-color: transparent;
+}
+.boxComponentTasks {
+  width: 90%;
+  height: 23rem;
+  margin-top: 1.2rem;
+  /* border: 1px solid red; */
+}
