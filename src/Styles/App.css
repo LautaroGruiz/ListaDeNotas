@@ -73,7 +73,7 @@
 /* --------------------------------------------- */
 .contenedorTasks {
   width: 28rem;
-  height: 35rem;
+  height: 36rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,11 +88,6 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.completeTittle {
-  color: #38115c;
-  margin-top: 0.1rem;
-  margin-bottom: 2rem;
 }
 .contenedorInput {
   position: relative;
@@ -128,8 +123,8 @@
   background-color: transparent;
 }
 .boxComponentTasks {
-  width: 90%;
-  height: 23rem;
+  width: 95%;
+  height: 24.5rem;
   margin-top: 1.2rem;
   /* border: 1px solid red; */
 }

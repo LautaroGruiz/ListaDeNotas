@@ -1,7 +1,20 @@
 import "../Styles/App.css";
-import man from "../Image//PersonaEscritorio.png"
+import man from "../Image//PersonaEscritorio.png";
+import TodoCounter from "./TodoCounter";
+import { useState } from "react";
+import TaskItem from "./TaskItem";
 
 function App() {
+  const [addedTask, setAddedTask] = useState("");
+
+  const handleTaskChange = (e) => {
+    e.preventDefault();
+    setAddedTask(e.target.value);
+  };
+  const addTasks = () => {
+    console.log(addedTask);
+    setAddedTask('');
+  };
   return (
     <>
       <main className="mainApp">
@@ -12,21 +25,33 @@ function App() {
             <input
               placeholder="Add the task"
               className="AddTaksInput"
-              type={"text"}
-              value=""
+              value={addedTask}
+              onChange={handleTaskChange}
             />
           </div>
-          <button className="buttonCreateTask">Create task</button>
+          <button onClick={addTasks} className="buttonCreateTask">
+            Create task
+          </button>
           <img className="imageMen" src={man} alt="Man adding a task" />
         </section>
         <section className="contenedorTasks">
           <h1 className="tittleYourTasks">Your tasks</h1>
-          <h3 className="completeTittle">Completed</h3>
+          <TodoCounter />
           <div className="contenedorInput">
-            <input className="inputSearchTasks" type="search" name="" id="" />
+            <input
+              className="inputSearchTasks"
+              type="search"
+              onChange={(event) => {
+                console.log(event.target.value);
+              }}
+              name=""
+              id=""
+            />
             <label>Search</label>
           </div>
-          <div className="boxComponentTasks"></div>
+          <div className="boxComponentTasks">
+            <TaskItem />
+          </div>
         </section>
       </main>
     </>
