@@ -41,7 +41,15 @@
 }
 .bi-pen {
   color: #38115c;
+  transition: .2s;
+}
+.bi-pen:hover {
+  color: #ff4800;
 }
 .bi-trash {
   color: #38115c;
+  transition: .2s;
+}
+.bi-trash:hover {
+  color: #ff4800;
 }
