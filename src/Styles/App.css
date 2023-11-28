@@ -33,7 +33,6 @@
   display: flex;
   flex-direction: column;
   margin: 2.3rem 0 0 1.5rem;
-  /* border: 1px solid red; */
 }
 .tittleTaskName {
   color: #451672;
@@ -53,31 +52,43 @@
   -moz-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 .buttonCreateTask {
-    background-color: #5f2892;
-    font-size: 14px;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 3px;
-    color: white;
-    margin: 1.3rem 0 0 1.5rem;
-    transition: 0.2s;
+  background-color: #5f2892;
+  font-size: 14px;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 3px;
+  color: white;
+  margin: 1.3rem 0 0 1.5rem;
+  transition: 0.2s;
 }
 .buttonCreateTask:hover {
-    background-color: #8438cc;
-    padding: 10px 16px;
+  background-color: #8438cc;
+  padding: 10px 16px;
 }
 .imageMen {
-    width: 90%;
-    margin: 3rem 0 0 1.3rem;
+  width: 90%;
+  margin: 3rem 0 0 1.3rem;
 }
 /* --------------------------------------------- */
 .contenedorTasks {
   width: 28rem;
-  height: 36rem;
+  max-height: 36rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 1px solid rgb(71, 19, 139); */
+  position: relative; /* o position: static; */
+  overflow-y: scroll;
+}
+.contenedorTasks::-webkit-scrollbar {
+  width: 5px;
+}
+.contenedorTasks::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+.contenedorTasks::-ms-scrollbar {
+  width: 10px;
 }
 .tittleYourTasks {
   font-family: "Familjen Grotesk", sans-serif;
@@ -88,6 +99,11 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.completeTittle {
+  color: #38115c;
+  margin-top: 0.1rem;
+  margin-bottom: 2rem;
 }
 .contenedorInput {
   position: relative;
@@ -126,5 +142,151 @@
   width: 95%;
   height: 24.5rem;
   margin-top: 1.2rem;
-  /* border: 1px solid red; */
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .mainApp {
+    flex-direction: column;
+  }
+  .contenedorCrearTasks {
+    width: 90%;
+    height: 40%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .CreateNewTask {
+    font-size: 1.4rem;
+    margin: 1rem 0 0 0;
+  }
+  .cajaInputAgregarTask {
+    width: 90%;
+    margin: 1.2rem 0 0 0rem;
+    text-align: center;
+  }
+  .imageMen {
+    display: none;
+  }
+  .contenedorTasks {
+    width: 90%;
+    max-height: 60%;
+  }
+  .tittleYourTasks {
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+  .completeTittle {
+    margin-top: 0.5rem !important;
+    margin-bottom: 1rem !important;
+    margin-left: 10px;
+    font-size: 1.1rem;
+  }
+ 
+}
+@media screen and (min-width: 375px) and (max-width: 399px) {
+  .mainApp {
+    flex-direction: column;
+  }
+  .contenedorCrearTasks {
+    width: 90%;
+    height: 40%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .CreateNewTask {
+    font-size: 1.8rem;
+    margin: 1rem 0 0 0;
+  }
+  .tittleTaskName {
+    font-size: 1.3rem;
+    margin: 0rem 0 1rem 0rem;
+
+  }
+  .cajaInputAgregarTask {
+    width: 90%;
+    margin: 1.8rem 0 1rem 0rem;
+    text-align: center;
+  }
+  .buttonCreateTask {
+    font-size: 19px;
+    padding: 10px 16px;
+    margin: 1.3rem 0 0 1.5rem;
+  }
+  .imageMen {
+    display: none;
+  }
+  .contenedorTasks {
+    width: 90%;
+    max-height: 60%;
+  }
+  .tittleYourTasks {
+    font-size: 2.2rem;
+    margin-top: 20px;
+  }
+  .completeTittle {
+    margin-top: 0.5rem !important;
+    margin-bottom: 1rem !important;
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 560px) {
+  .mainApp {
+    flex-direction: column;
+  }
+  .contenedorCrearTasks {
+    width: 90%;
+    height: 40%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .CreateNewTask {
+    font-size: 1.8rem;
+    margin: 1rem 0 0 0;
+  }
+  .tittleTaskName {
+    font-size: 1.3rem;
+    margin: 0rem 0 1rem 0rem;
+
+  }
+  .cajaInputAgregarTask {
+    width: 90%;
+    margin: 1.8rem 0 1rem 0rem;
+    text-align: center;
+  }
+  .buttonCreateTask {
+    font-size: 19px;
+    padding: 10px 16px;
+    margin: 1.3rem 0 0 1.5rem;
+  }
+  .imageMen {
+    display: none;
+  }
+  .contenedorTasks {
+    width: 90%;
+    max-height: 60%;
+  }
+  .tittleYourTasks {
+    font-size: 2.2rem;
+    margin-top: 20px;
+  }
+  .completeTittle {
+    margin-top: 0.5rem !important;
+    margin-bottom: 1rem !important;
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 999px) {
+  .contenedorCrearTasks {
+    height: 90%;
+  }
+  .imageMen {
+    width: 82%;
+    margin: 3rem 0 0 1.3rem;
+  }
 }

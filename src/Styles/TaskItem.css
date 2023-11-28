@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
 }
 .cajaTildeTask {
     /* border: 1px solid firebrick; */
@@ -52,4 +53,22 @@
 }
 .bi-trash:hover {
   color: #ff4800;
+}
+.contendorDeLaNota.completed {
+  border-bottom: 2px solid #32CD32; /* Color verde, puedes ajustarlo según tu preferencia */
+}
+
+.taskImportant.completed-text {
+  text-decoration: line-through;
+  color: #808080; /* Puedes ajustar el color según tu preferencia */
+}
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .taskImportant {
+    font-size: 0.88rem;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 390px) {
+  .taskImportant {
+    font-size: 1.1rem;
+  }
 }
