@@ -56,9 +56,9 @@ function App() {
     <>
       <main className="mainApp">
         <section className="contenedorCrearTasks">
-          <h2 className="CreateNewTask">Crea una nota</h2>
+          <h2 className="CreateNewTask">Crea una tarea</h2>
           <div className="cajaInputAgregarTask">
-            <label className="tittleTaskName">Nombre de la nota</label>
+            <label className="tittleTaskName">Nombre de la tarea</label>
             <input
               placeholder="Escribe aqui"
               className="AddTaksInput"
@@ -67,13 +67,13 @@ function App() {
             />
           </div>
           <button onClick={addTask} className="buttonCreateTask">
-            Crear nota
+            Crear tarea
           </button>
           <img className="imageMen" src={man} alt="Man adding a task" />
         </section>
         <section className="contenedorTasks">
-          <h1 className="tittleYourTasks">Tus notas</h1>
-          <h3 className="completeTittle">Aqui veras las notas que agregues</h3>
+          <h1 className="tittleYourTasks">Tus tareas</h1>
+          <h3 className="completeTittle">Aqui veras las tareas que agregues</h3>
           <div className="contenedorInput">
             <input
               className="inputSearchTasks"
